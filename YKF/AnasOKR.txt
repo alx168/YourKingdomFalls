@@ -1,0 +1,2 @@
+adding movement for the unit -- Tue by 12am (estimate: 1 hr)
+create a adjaceny list and run BFS to find spaces that we can move to -- Tue by 12 am (estimate: 5 hrs)
