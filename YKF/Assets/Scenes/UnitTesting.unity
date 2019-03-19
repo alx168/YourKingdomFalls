@@ -239,8 +239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitModel: {fileID: 7975124530878609604, guid: c5b9d35d3987f3549a7fa22569ef5619,
     type: 3}
-  rank: 5
-  file: 5
+  rank: 4
+  file: 4
 --- !u!1 &1391790103
 GameObject:
   m_ObjectHideFlags: 0
