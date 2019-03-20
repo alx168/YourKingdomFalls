@@ -1,2 +1,0 @@
-Creating GUI for ending turn -- Tue by 12am (estimate: 1hr)
-GUI displaying current players turn -- Tue by 12am (estimate: 1hr)
