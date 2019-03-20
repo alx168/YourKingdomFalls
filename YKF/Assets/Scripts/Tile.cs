@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public bool walkable = true;
+    public bool walkable;
     public bool current = false;
     public bool target = false;
     public bool selectable = false;
@@ -48,7 +48,7 @@ public class Tile : MonoBehaviour
     {
         adjacenyList.Clear();
 
-        walkable = true;
+       // walkable = true;
         current = false;
         target = false;
         selectable = false;
