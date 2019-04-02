@@ -159,13 +159,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &13887769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -271,13 +274,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &45347856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -383,13 +389,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &86187497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -495,13 +504,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &88238840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -607,13 +619,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &91978692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -719,13 +734,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &100110647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -831,13 +849,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &156314297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -896,6 +917,121 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156314294}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &166595406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166595407}
+  - component: {fileID: 166595411}
+  - component: {fileID: 166595410}
+  - component: {fileID: 166595409}
+  - component: {fileID: 166595408}
+  m_Layer: 0
+  m_Name: Tile (12)
+  m_TagString: Tile
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &166595407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166595406}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1534794909}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &166595408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166595406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63b11a88f2501749ac497c097ccc148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkable: 1
+  currentTile: 0
+  target: 0
+  selectable: 0
+  adjacenyList: []
+  visited: 0
+  parent: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
+--- !u!65 &166595409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166595406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &166595410
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166595406}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 62f5c8c36767cb442a79e0998313fe6c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &166595411
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166595406}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &169093652
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,13 +1079,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &169093655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1055,13 +1194,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &177214812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1167,13 +1309,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &186450329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1279,13 +1424,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &192186434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1433,13 +1581,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &211083480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1545,13 +1696,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &221318122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1657,13 +1811,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &238528384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1769,13 +1926,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &248855104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1881,13 +2041,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &250213979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2062,13 +2225,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &291925846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2174,13 +2340,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &301235153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2286,13 +2455,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &319711691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2440,13 +2612,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &322129621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2594,13 +2769,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &340199324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2706,13 +2884,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &341103005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2818,13 +2999,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &354063736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2930,13 +3114,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &364638238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3042,13 +3229,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &396546906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3154,13 +3344,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &420665735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3266,13 +3459,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &421655915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3378,13 +3574,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &436542070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3490,13 +3689,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &455903520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3602,13 +3804,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &504323957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3714,13 +3919,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &508896675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3826,13 +4034,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &518412502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3891,6 +4102,118 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518412499}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &522457002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522457007}
+  - component: {fileID: 522457006}
+  - component: {fileID: 522457005}
+  - component: {fileID: 522457004}
+  - component: {fileID: 522457003}
+  m_Layer: 0
+  m_Name: NPC
+  m_TagString: NPC
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &522457003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522457002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9cdf596238ead94fb52c26c0009a681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turn: 0
+  moving: 0
+  move: 5
+  jumpHeight: 2
+  moveSpeed: 2
+  jumpVelocity: 4.5
+  actualTargetTile: {fileID: 0}
+--- !u!136 &522457004
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522457002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &522457005
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522457002}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 958b340fd41163a41b85c9c3513602e4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &522457006
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522457002}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &522457007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522457002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 1.4, z: 11}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534688764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3938,13 +4261,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &534688767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4050,13 +4376,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &539201639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4162,13 +4491,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &549562609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4316,13 +4648,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &566008261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4428,13 +4763,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &586084675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4540,13 +4878,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &593590176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4652,13 +4993,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &600367227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4764,13 +5108,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &608860476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4876,13 +5223,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &610606685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4988,13 +5338,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &655401730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5100,13 +5453,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &691170333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5212,13 +5568,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &692836967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5324,13 +5683,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &742219720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5436,13 +5798,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &742588676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5548,13 +5913,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &746678471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5702,13 +6070,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &751790016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5814,13 +6185,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &775543836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5926,13 +6300,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &799163177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6038,13 +6415,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &803559228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6150,13 +6530,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &805977281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6262,13 +6645,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &810858099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6456,13 +6842,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &843434531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6568,13 +6957,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &846636198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6680,13 +7072,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &854579405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6792,13 +7187,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &856572061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6904,13 +7302,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &866924928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7016,13 +7417,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &874110758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7089,14 +7493,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 878560849}
+  - component: {fileID: 878560851}
   - component: {fileID: 878560848}
   - component: {fileID: 878560847}
   - component: {fileID: 878560846}
   - component: {fileID: 878560845}
+  - component: {fileID: 878560850}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7113,10 +7518,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be817b39c1c53b469f32d010adfd571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turn: 0
   moving: 0
   move: 5
   jumpHeight: 2
   moveSpeed: 2
+  jumpVelocity: 4.5
+  actualTargetTile: {fileID: 0}
+  hover: {fileID: 0}
+  original: {fileID: 0}
 --- !u!136 &878560846
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7176,20 +7586,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878560844}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &878560849
-Transform:
+--- !u!222 &878560850
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878560844}
+  m_CullTransparentMesh: 0
+--- !u!224 &878560851
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878560844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 1.4, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0.2}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.19, y: 0.88}
+  m_SizeDelta: {x: 10, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &880154457
 GameObject:
   m_ObjectHideFlags: 0
@@ -7237,13 +7660,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &880154460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7349,13 +7775,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &880993829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7461,13 +7890,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &890902769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7573,13 +8005,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &910506992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7685,13 +8120,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &910937433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7839,13 +8277,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &948675859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7951,13 +8392,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &954505035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8063,13 +8507,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &956847983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8137,6 +8584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 962041267}
+  - component: {fileID: 962041268}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -8170,6 +8618,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &962041268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962041266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35054dd9a5a0d54596084b97ab8f714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &966910913
 GameObject:
   m_ObjectHideFlags: 0
@@ -8217,13 +8677,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &966910916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8329,13 +8792,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &983967246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8441,13 +8907,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1007748832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8553,13 +9022,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1009771375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8665,13 +9137,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1025173819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8777,13 +9252,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1045609790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8889,13 +9367,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1049094737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9001,13 +9482,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1054752259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9113,13 +9597,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1124543921
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9225,13 +9712,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1132368631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9337,13 +9827,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1134287840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9449,13 +9942,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1149131099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9561,13 +10057,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1153841297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9673,13 +10172,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1160767203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9785,13 +10287,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1171672386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9897,13 +10402,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1180567235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10009,13 +10517,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1238197292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10121,13 +10632,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1245652755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10233,13 +10747,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1273171045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10345,13 +10862,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1329153535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10457,13 +10977,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1351120181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10569,13 +11092,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1354126082
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10681,13 +11207,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1365518007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10835,13 +11364,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1433605190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10947,13 +11479,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1457683743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11059,13 +11594,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1460979340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11171,13 +11709,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1467199854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11325,13 +11866,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1500983768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11437,13 +11981,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1512407130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11549,13 +12096,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1513938871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11661,13 +12211,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1523499824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11773,13 +12326,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1525310747
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11885,13 +12441,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1531762605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11997,13 +12556,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1533162676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12101,6 +12663,7 @@ Transform:
   - {fileID: 810858097}
   - {fileID: 1656122251}
   - {fileID: 1329153533}
+  - {fileID: 166595407}
   m_Father: {fileID: 962041267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12151,13 +12714,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1556986147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12263,13 +12829,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1558550801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12375,13 +12944,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1565721208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12487,13 +13059,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1575702799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12599,13 +13174,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1587393899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12711,13 +13289,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1596211005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12823,13 +13404,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1602787967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12935,13 +13519,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1624886330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13047,13 +13634,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1628017716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13159,13 +13749,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1653150837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13271,13 +13864,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1654511915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13383,13 +13979,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1656122253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13495,13 +14094,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1670376140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13607,13 +14209,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1675349203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13719,13 +14324,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1693394845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13831,13 +14439,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1709439148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13943,13 +14554,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1751942245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14055,13 +14669,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1754021946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14167,13 +14784,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1762015059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14279,13 +14899,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1766867269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14391,13 +15014,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1767426801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14503,13 +15129,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1777281283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14699,13 +15328,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1860982854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14764,6 +15396,134 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860982851}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1879028575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1879028581}
+  - component: {fileID: 1879028579}
+  - component: {fileID: 1879028578}
+  - component: {fileID: 1879028577}
+  - component: {fileID: 1879028576}
+  - component: {fileID: 1879028580}
+  m_Layer: 0
+  m_Name: Player (1)
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1879028576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879028575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be817b39c1c53b469f32d010adfd571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turn: 0
+  moving: 0
+  move: 5
+  jumpHeight: 2
+  moveSpeed: 2
+  jumpVelocity: 4.5
+  actualTargetTile: {fileID: 0}
+  hover: {fileID: 0}
+  original: {fileID: 0}
+--- !u!136 &1879028577
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879028575}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1879028578
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879028575}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: aed4f3fa375d49d4ea968f9c126617c6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1879028579
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879028575}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!222 &1879028580
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879028575}
+  m_CullTransparentMesh: 0
+--- !u!224 &1879028581
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879028575}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.6, y: 1.4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1927087785
 GameObject:
   m_ObjectHideFlags: 0
@@ -14811,13 +15571,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1927087788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14923,13 +15686,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1935415158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15035,13 +15801,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1936430946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15147,13 +15916,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1943680346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15259,13 +16031,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1954968265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15371,13 +16146,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1958104368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15483,13 +16261,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &1964611242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15595,13 +16376,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2003043066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15707,13 +16491,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2008363879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15819,13 +16606,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2012734749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15931,13 +16721,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2029679130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16043,13 +16836,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2042521874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16155,13 +16951,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2046198305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16309,13 +17108,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2049812136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16421,13 +17223,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2057825318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16533,13 +17338,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2065172759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16645,13 +17453,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2073530210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16757,13 +17568,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2101470240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16869,13 +17683,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2105041583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16981,13 +17798,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: 1
-  current: 0
+  currentTile: 0
   target: 0
   selectable: 0
   adjacenyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!65 &2137608256
 BoxCollider:
   m_ObjectHideFlags: 0
