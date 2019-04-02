@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 creating units and general unit framework. -- Tue by 11:59PM (estimate 2 hr)
 generating individual soldiers within the unit. -- Tue by 11:59PM (estimate 1 hr)
+=======
+creating units and general unit framework. -- Tue by 11:59PM (estimate 2 hr)
+generating individual soldiers within the unit. -- Tue by 11:59PM (estimate 1 hr)
+>>>>>>> origin/Moving
