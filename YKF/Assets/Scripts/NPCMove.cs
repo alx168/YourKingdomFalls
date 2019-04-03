@@ -6,6 +6,7 @@ public class NPCMove : TacticsMove
 {
     GameObject target;
     // Start is called before the first frame update
+    public Animator anim;
     void Start()
     {
         Init();
@@ -17,6 +18,7 @@ public class NPCMove : TacticsMove
 
         if (!turn)
         {
+            anim.SetBool("Walking", false);
             return;
         }
         if (!moving)
@@ -30,7 +32,7 @@ public class NPCMove : TacticsMove
         else
         {
             // todo move
-
+        	anim.SetBool("Walking", true);
             Move();
         }
     }

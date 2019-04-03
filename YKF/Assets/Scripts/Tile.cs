@@ -4,17 +4,9 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-<<<<<<< HEAD
-    public bool walkable;
-=======
-<<<<<<< Updated upstream
     public bool walkable = true;
->>>>>>> origin/Moving
     public bool current = false;
-=======
-    public bool walkable;
     public bool currentTile = false;
->>>>>>> Stashed changes
     public bool target = false;
     public bool selectable = false;
 
@@ -60,18 +52,10 @@ public class Tile : MonoBehaviour
     public void Reset()
     {
         adjacenyList.Clear();
-
-<<<<<<< HEAD
-       // walkable = true;
-=======
-<<<<<<< Updated upstream
         walkable = true;
->>>>>>> origin/Moving
         current = false;
-=======
        // walkable = true;
         currentTile = false;
->>>>>>> Stashed changes
         target = false;
         selectable = false;
 

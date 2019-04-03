@@ -8,6 +8,7 @@ public class UnitMove : TacticsMove
 
     public Material hover;
     public Material original;
+    public Animator anim;
     Tile hoveringTile;
     
 
@@ -23,6 +24,7 @@ public class UnitMove : TacticsMove
 
         if (!turn)
         {
+            anim.SetBool("Walking", false);
             return;
         }
         if (!moving)
@@ -34,7 +36,7 @@ public class UnitMove : TacticsMove
         else
         {
             // todo move
-
+            anim.SetBool("Walking", true);
             Move();
         }
     }
