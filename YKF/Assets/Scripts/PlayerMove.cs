@@ -7,15 +7,20 @@ public class UnitMove : TacticsMove
 {
 
     public Material hover;
-    public Material original;
     public Animator anim;
-    Tile hoveringTile;
-    
+
+    public AudioSource walking;
+    //Play the music
+    bool m_Play = true;
+    //Detect when you use the toggle, ensures music isn’t played multiple times
+    bool m_ToggleChange;
+
 
     // Start is called before the first frame update
     void Start()
     {
         Init();
+        
     }
 
     // Update is called once per frame
@@ -24,6 +29,10 @@ public class UnitMove : TacticsMove
 
         if (!turn)
         {
+            if(m_Play == false){
+            walking.Stop();
+           }
+           m_Play = true;
             anim.SetBool("Walking", false);
             return;
         }
@@ -36,6 +45,10 @@ public class UnitMove : TacticsMove
         else
         {
             // todo move
+           if(m_Play == true){
+            walking.Play();
+           }
+           m_Play = false;
             anim.SetBool("Walking", true);
             Move();
         }

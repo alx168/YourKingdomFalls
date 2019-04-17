@@ -7,9 +7,11 @@ public class NPCMove : TacticsMove
     GameObject target;
     // Start is called before the first frame update
     public Animator anim;
+    public AudioSource walking;
     void Start()
     {
         Init();
+        
     }
 
     // Update is called once per frame
@@ -18,6 +20,7 @@ public class NPCMove : TacticsMove
 
         if (!turn)
         {
+            walking.Stop();
             anim.SetBool("Walking", false);
             return;
         }
@@ -32,6 +35,7 @@ public class NPCMove : TacticsMove
         else
         {
             // todo move
+            walking.Play();
         	anim.SetBool("Walking", true);
             Move();
         }

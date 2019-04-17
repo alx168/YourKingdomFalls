@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMove : TacticsMove
 {
     // Start is called before the first frame update
+     public AudioSource walking;
+     bool m_Play;
     void Start()
     {
         Init();
@@ -15,13 +17,14 @@ public class PlayerMove : TacticsMove
     {
         if (!moving)
         {
+            walking.Stop();
             FindSelectableTiles();
             CheckMouse();
         }
         else
         {
             // todo move
-
+            walking.Play();
             Move();
         }
     }
