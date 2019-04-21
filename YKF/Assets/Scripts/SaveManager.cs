@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System;
 using System.IO;
@@ -18,7 +19,13 @@ public class serializableTransform
 public class SaveManager : MonoBehaviour
 {
     public GameObject[] Units;
+    public Text t;
 
+    private string dataLocation;
+    private void Start()
+    {
+        dataLocation = Application.persistentDataPath + "/playerInfo.data";
+    }
     void Update()
     {
         //save
@@ -37,8 +44,8 @@ public class SaveManager : MonoBehaviour
 
     public void Save() {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.data", FileMode.OpenOrCreate);
-        Debug.Log("saved to: " + Application.persistentDataPath + "/playerInfo.data");
+        FileStream file = File.Create(dataLocation);
+        Debug.Log("saved to: " + dataLocation);
 
         ArrayList data = new ArrayList();
         foreach (GameObject g in Units) {
@@ -53,20 +60,31 @@ public class SaveManager : MonoBehaviour
         }
         bf.Serialize(file, data);
         file.Close();
+
+        t.text = "Saved to: " + dataLocation;
+        StartCoroutine(waitThenClear(t));
     }
 
     public void Load()
     {
-        if (File.Exists(Application.persistentDataPath + "/playerInfo.data")){
+        if (File.Exists(dataLocation)){
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.OpenRead(Application.persistentDataPath + "/playerInfo.data");
+            FileStream file = File.OpenRead(dataLocation);
             ArrayList loadData = (ArrayList)(bf.Deserialize(file));
+            Debug.Log("Loaded from: " + dataLocation);
 
             for (int i = 0; i < Units.Length; i++) {
                 serializableTransform transformData = (serializableTransform)loadData[i];
                 Units[i].transform.position = new Vector3(transformData.x, transformData.y, transformData.z);
                 Units[i].transform.eulerAngles = new Vector3(transformData.xRot, transformData.yRot, transformData.zRot);
             }
+
+            t.text = "Load from: " + dataLocation;
+            StartCoroutine(waitThenClear(t));
         }
+    }
+    IEnumerator waitThenClear(Text t) {
+        yield return new WaitForSeconds(3);
+        t.text = "";
     }
 }
