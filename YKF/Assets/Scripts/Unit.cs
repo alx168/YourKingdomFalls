@@ -10,12 +10,16 @@ public class Unit : MonoBehaviour
     private int rank;
     [SerializeField]
     private int file;
+    [SerializeField]
+    private float rankLength;
+    [SerializeField]
+    private float fileLength;
 
-    public void generateSoldiers(GameObject prefab, int width, int height){
+    public void generateSoldiers(GameObject prefab, int width, int height, float rankLength, float fileLength){
     	for(int i = 0; i < width; i++){
     		for(int j = 0; j < height; j++){
     			GameObject go = Instantiate(prefab, 
-    				new Vector3(transform.position.x - (i * 1.5f), transform.position.y, transform.position.z - (j * 1.5f)), 
+    				new Vector3(transform.position.x - (i * rankLength), transform.position.y, transform.position.z - (j * fileLength)), 
     					Quaternion.identity) as GameObject;
     			go.transform.parent = transform;
     		}
@@ -24,7 +28,7 @@ public class Unit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        generateSoldiers(UnitModel, rank, file);
+        generateSoldiers(UnitModel, rank, file, rankLength, fileLength);
     }
 
     // Update is called once per frame

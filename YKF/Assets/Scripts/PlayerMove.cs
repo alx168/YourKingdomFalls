@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMove : TacticsMove
+public class UnitMove : TacticsMove
 {
 
-    public Material hover;
-    public Material original;
+    
+    public Animator anim;
+    
     Tile hoveringTile;
+    
+
+    public int health;
+    public GameObject unit;
+    
+    GameObject enemies;
+
     
 
     // Start is called before the first frame update
@@ -21,48 +29,105 @@ public class PlayerMove : TacticsMove
     void Update()
     {
 
-        if (!turn)
+        enemies = GameObject.FindWithTag("NPC");
+        if (enemies == null)
         {
-            return;
-        }
-        if (!moving)
-        {
-            FindSelectableTiles();
-            
-            CheckMouse();
-        }
-        else
-        {
-            // todo move
+            stillPlaying = false;
 
-            Move();
+        }
+        if (stillPlaying == true)
+        {
+            if (!turn)
+            {
+                if (health <= 0)
+                {
+                    unitCount--;
+
+                    RemoveUnit();
+                    if (unitCount == 0)
+                    {
+                        stillPlaying = false;
+                    }
+                    
+
+                    Destroy(unit);
+                    //TurnMan.RemoveUnit(this);
+                    //TurnMan.EndTurn();
+                    //Destroy(this);
+                }
+                //anim.SetBool("Walking", false);
+                anim.SetBool("Attacking", false);
+                alreadyMoved = false;
+                return;
+            }
+            if (!moving && doneAttacking && alreadyMoved == false)
+            {
+
+                // FindNPCAttacker(health, anim);
+
+                FindSelectableTiles();
+
+                CheckMouse();
+
+                if (health <= 0)
+                {
+                    RemoveUnit();
+                    TurnMan.EndTurn();
+                    Destroy(unit);
+                    //TurnMan.RemoveUnit(this);
+                    //TurnMan.EndTurn();
+                    //    //Destroy(this);
+                }
+                //FindNPCAttacker(health, anim);
+            }
+            else if (!moving && doneAttacking == false)
+            {
+                anim.SetBool("Walking", false);
+                FindNPCToAttack(health, anim, transform);
+
+                //TurnMan.EndTurn();
+
+                if (health <= 0)
+                {
+                   RemoveUnit();
+                    TurnMan.EndTurn();
+                    Destroy(unit);
+                    //TurnMan.RemoveUnit(this);
+                    //TurnMan.EndTurn();
+                    //    //Destroy(this);
+                }
+                
+
+
+            }
+            else if (moving && doneAttacking && alreadyMoved == false)
+            {
+                // todo move
+                //FindNPCAttacker(health, anim);
+                anim.SetBool("Walking", true);
+                Move();
+
+                if (health <= 0)
+                {
+                    RemoveUnit();
+                    TurnMan.EndTurn();
+                    Destroy(unit);
+                    //TurnMan.RemoveUnit(this);
+                    //TurnMan.EndTurn();
+                    //    //Destroy(this);
+                }
+                //FindNPCAttacker(health, anim);
+            }
         }
     }
+
+    
 
     void CheckMouse()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
-
-
-        //if (Physics.Raycast(ray, out hit))
-        //{
-        //    if (hit.collider.tag == "Tile")
-        //    {
-        //        Tile t = hit.collider.GetComponent<Tile>();
-
-        //        if (t.selectable)
-        //        {
-        //           // t.GetComponent<Renderer>().material = hover;
-        //            //path.Push(t);
-
-
-        //        }
-
-        //    }
-        //}
-        
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -85,20 +150,4 @@ public class PlayerMove : TacticsMove
 
         
     }
-
-    //void OnMouseOver()
-    //{
-    //    if (turn)
-    //    {
-    //        hoveringTile.GetComponent<Renderer>().material = hover;
-    //    }
-    //}
-
-    //void OnMouseExit()
-    //{
-    //    if (!turn)
-    //    {
-    //        hoveringTile.GetComponent<Renderer>().material = original;
-    //    }
-    //}
 }

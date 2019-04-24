@@ -6,6 +6,15 @@ public class NPCMove : TacticsMove
 {
     GameObject target;
     // Start is called before the first frame update
+    public Animator anim;
+    public int health;
+
+    public GameObject unit;
+    
+    GameObject enemies; 
+    //GameObject.FindWithTag("Player");
+    
+   
     void Start()
     {
         Init();
@@ -14,32 +23,79 @@ public class NPCMove : TacticsMove
     // Update is called once per frame
     void Update()
     {
-
-        if (!turn)
+        enemies = GameObject.FindWithTag("Player");
+        if( enemies == null)
         {
-            return;
-        }
-        if (!moving)
-        {
-            FindNearestTarget();
-            CalculatePath();
-            FindSelectableTiles();
-            actualTargetTile.target = true;
+            stillPlaying = false;
 
         }
-        else
+        if (stillPlaying == true)
         {
-            // todo move
+            if (!turn)
+            {
+                if (health <= 0)
+                {
+                    //Debug.Log("My nigga Died");
+                    npcCount = npcCount- 1;
+                    if (npcCount <= 0)
+                    {
+                        stillPlaying = false;
+                    }
+                    RemoveUnit();
+                    Destroy(unit);
+                    
 
-            Move();
+                }
+                anim.SetBool("Attacking", false);
+                //anim.SetBool("Attacking", false);
+                alreadyMoved = false;
+                return;
+            }
+            if (!moving && doneAttacking && alreadyMoved == false)
+            {
+                //FindUnitAttacker(health, anim);
+
+
+                FindNearestTarget();
+                CalculatePath();
+                FindSelectableTiles();
+                actualTargetTile.target = true;
+                //FindUnitAttacker(health, anim);
+
+            }
+            else if (!moving && doneAttacking == false)
+            {
+                anim.SetBool("Walking", false);
+                FindUnitToAttack(health, anim, transform);
+                //if (health <= 0)
+                //{
+                   //TurnMan.RemoveUnit(this);
+                   //Destroy(unit);
+                    
+                //}
+                TurnMan.EndTurn();
+
+            }
+            else if (moving && doneAttacking && alreadyMoved == false)
+            {
+                // todo move
+                //FindUnitAttacker(health, anim);
+                anim.SetBool("Walking", true);
+                Move();
+                //FindUnitAttacker(health, anim);
+            }
         }
     }
+
+    
 
     void CalculatePath()
     {
         Tile targetTile = GetTargetTile(target);
         FindPath(targetTile);
     }
+
+    
 
     void FindNearestTarget()
     {
