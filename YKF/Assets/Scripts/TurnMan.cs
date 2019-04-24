@@ -27,6 +27,7 @@ public class TurnMan : MonoBehaviour
     {
         List<TacticsMove> teamList = units[turnKey.Peek()];
 
+        
         foreach (TacticsMove unit in teamList)
         {
             turnTeam.Enqueue(unit);
@@ -80,5 +81,22 @@ public class TurnMan : MonoBehaviour
         }
 
         list.Add(unit);
+    }
+
+    public static void RemoveUnit(TacticsMove unit)
+    {
+        List<TacticsMove> list2;
+        if (units.ContainsKey(unit.tag))
+        {
+            //list2 = new List<TacticsMove>();
+            list2 = units[unit.tag];
+            list2.Remove(unit);
+            units[unit.tag] = list2;
+            
+            
+        }
+
+        
+        
     }
 }

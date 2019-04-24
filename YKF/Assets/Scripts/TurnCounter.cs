@@ -27,5 +27,8 @@ public class TurnCounter : MonoBehaviour
         	counter++;
         }
         mytext.text = "Turn:      " + counter;
+
+        
+        
     }
 }

@@ -6,78 +6,131 @@ using UnityEngine.UI;
 public class UnitMove : TacticsMove
 {
 
-    public Material hover;
+    
     public Animator anim;
+    public Image healthBar;
+    Tile hoveringTile;
 
-    public AudioSource walking;
-    //Play the music
-    bool m_Play = true;
-    //Detect when you use the toggle, ensures music isn’t played multiple times
-    bool m_ToggleChange;
+    public int maxHealth;
+    public int health;
+    public GameObject unit;
+    
+    GameObject enemies;
 
 
+    void changeHealth() {
+        healthBar.fillAmount = health / maxHealth;
+    }
     // Start is called before the first frame update
     void Start()
     {
         Init();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (!turn)
+        enemies = GameObject.FindWithTag("NPC");
+        if (enemies == null)
         {
-            if(m_Play == false){
-            walking.Stop();
-           }
-           m_Play = true;
-            anim.SetBool("Walking", false);
-            return;
+            stillPlaying = false;
+
         }
-        if (!moving)
+        if (stillPlaying == true)
         {
-            FindSelectableTiles();
-            
-            CheckMouse();
-        }
-        else
-        {
-            // todo move
-           if(m_Play == true){
-            walking.Play();
-           }
-           m_Play = false;
-            anim.SetBool("Walking", true);
-            Move();
+            if (!turn)
+            {
+                changeHealth();
+                if (health <= 0)
+                {
+                    unitCount--;
+
+                    RemoveUnit();
+                    if (unitCount == 0)
+                    {
+                        stillPlaying = false;
+                    }
+                    
+
+                    Destroy(unit);
+                    //TurnMan.RemoveUnit(this);
+                    //TurnMan.EndTurn();
+                    //Destroy(this);
+                }
+                //anim.SetBool("Walking", false);
+                anim.SetBool("Attacking", false);
+                alreadyMoved = false;
+                return;
+            }
+            if (!moving && doneAttacking && alreadyMoved == false)
+            {
+
+                // FindNPCAttacker(health, anim);
+
+                FindSelectableTiles();
+
+                CheckMouse();
+
+                if (health <= 0)
+                {
+                    RemoveUnit();
+                    TurnMan.EndTurn();
+                    Destroy(unit);
+                    //TurnMan.RemoveUnit(this);
+                    //TurnMan.EndTurn();
+                    //    //Destroy(this);
+                }
+                //FindNPCAttacker(health, anim);
+            }
+            else if (!moving && doneAttacking == false)
+            {
+                anim.SetBool("Walking", false);
+                FindNPCToAttack(health, anim, transform);
+
+                //TurnMan.EndTurn();
+
+                if (health <= 0)
+                {
+                   RemoveUnit();
+                    TurnMan.EndTurn();
+                    Destroy(unit);
+                    //TurnMan.RemoveUnit(this);
+                    //TurnMan.EndTurn();
+                    //    //Destroy(this);
+                }
+                
+
+
+            }
+            else if (moving && doneAttacking && alreadyMoved == false)
+            {
+                // todo move
+                //FindNPCAttacker(health, anim);
+                anim.SetBool("Walking", true);
+                Move();
+
+                if (health <= 0)
+                {
+                    RemoveUnit();
+                    TurnMan.EndTurn();
+                    Destroy(unit);
+                    //TurnMan.RemoveUnit(this);
+                    //TurnMan.EndTurn();
+                    //    //Destroy(this);
+                }
+                //FindNPCAttacker(health, anim);
+            }
         }
     }
+
+    
 
     void CheckMouse()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
-
-
-        //if (Physics.Raycast(ray, out hit))
-        //{
-        //    if (hit.collider.tag == "Tile")
-        //    {
-        //        Tile t = hit.collider.GetComponent<Tile>();
-
-        //        if (t.selectable)
-        //        {
-        //           // t.GetComponent<Renderer>().material = hover;
-        //            //path.Push(t);
-
-
-        //        }
-
-        //    }
-        //}
-        
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -100,20 +153,4 @@ public class UnitMove : TacticsMove
 
         
     }
-
-    //void OnMouseOver()
-    //{
-    //    if (turn)
-    //    {
-    //        hoveringTile.GetComponent<Renderer>().material = hover;
-    //    }
-    //}
-
-    //void OnMouseExit()
-    //{
-    //    if (!turn)
-    //    {
-    //        hoveringTile.GetComponent<Renderer>().material = original;
-    //    }
-    //}
 }

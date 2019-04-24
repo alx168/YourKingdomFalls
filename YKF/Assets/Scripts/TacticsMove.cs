@@ -14,6 +14,7 @@ public class TacticsMove : MonoBehaviour
     
 
     public bool moving = false;
+    
     public int move = 5;
     public float jumpHeight = 2;
     public float moveSpeed = 2;
@@ -32,6 +33,15 @@ public class TacticsMove : MonoBehaviour
     Vector3 jumpTarget;
 
     public Tile actualTargetTile;
+    private bool enemy;
+    public int direction;
+
+    public bool doneAttacking = true;
+    public bool alreadyMoved = false;
+    public bool stillPlaying = true;
+
+    public int unitCount;
+    public int npcCount;
 
     protected void Init()
     {
@@ -42,6 +52,11 @@ public class TacticsMove : MonoBehaviour
         halfX = GetComponent<Collider>().bounds.extents.x;
 
         TurnMan.AddUnit(this);
+    }
+
+    public void RemoveUnit()
+    {
+        TurnMan.RemoveUnit(this);
     }
 
     public void GetCurrentTile()
@@ -126,7 +141,7 @@ public class TacticsMove : MonoBehaviour
     {
         if(path.Count == 0)
         {
-            Debug.Log("nothing here");
+            //Debug.Log("nothing here");
         }
         if (path.Count > 0)
         {
@@ -171,7 +186,9 @@ public class TacticsMove : MonoBehaviour
         {
             RemoveSelectableTiles();
             moving = false;
-            TurnMan.EndTurn();
+            doneAttacking = false;
+            alreadyMoved = true;
+            //TurnMan.EndTurn();
             //path.Clear();
 
         }
@@ -410,5 +427,149 @@ public class TacticsMove : MonoBehaviour
     public void EndTurn()
     {
         turn = false;
+    }
+
+    public void FindUnitToAttack(int health, Animator anim, Transform position)
+    {
+        if (doneAttacking == false)
+        {
+            enemy = false;
+            GetCurrentTile();
+            enemy = currentTile.CheckForUnits(jumpHeight, ref direction, position);
+
+
+            if (direction == 0 && enemy == true)
+            {
+                //Debug.Log("gothere0");
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                System.Random rand = new System.Random();
+                health -= rand.Next(1, 4);
+                anim.SetBool("Attacking", true);
+                //StartCoroutine(Example(anim));
+            }
+            else if (direction == 1 && enemy == true)
+            {
+                // Debug.Log("gothere1");
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+                System.Random rand = new System.Random();
+                health -= rand.Next(1, 4);
+                anim.SetBool("Attacking", true);
+                //StartCoroutine(Example(anim));
+            }
+            else if (direction == 2 && enemy == true)
+            {
+                //   Debug.Log("gothere2");
+                transform.rotation = Quaternion.Euler(0, 90, 0);
+                System.Random rand = new System.Random();
+                health -= rand.Next(1, 4);
+                anim.SetBool("Attacking", true);
+                //StartCoroutine(Example(anim));
+            }
+            else if (direction == 3 && enemy == true)
+            {
+                // Debug.Log("gothere3");
+                transform.rotation = Quaternion.Euler(0, 270, 0);
+                System.Random rand = new System.Random();
+                health -= rand.Next(1, 4);
+                anim.SetBool("Attacking", true);
+                //StartCoroutine(Example(anim));
+            }
+            Debug.Log("Unit " + health);
+            //if(enemy == false)
+            //{
+            doneAttacking = true;
+
+            //}
+            //doneAttacking = true;
+
+            enemy = false;
+            
+
+            //Debug.Log("Npc " + health);
+            //Debug.Log("Direction: " + direction);
+            
+            
+
+        }
+            
+
+
+    }
+    
+    public void  FindNPCToAttack(int health, Animator anim, Transform position)
+    {
+        if (doneAttacking == false)
+        {
+
+            enemy = false;
+            GetCurrentTile();
+            enemy = currentTile.CheckForNPCEnemies( jumpHeight, ref direction, position);
+
+
+            if (direction == 0 && enemy == true)
+            {
+                //Debug.Log("gothere0");
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                
+                anim.SetBool("Attacking", true);
+                //StartCoroutine(Example(anim));
+            }
+            else if (direction == 1 && enemy == true)
+            {
+                //Debug.Log("gothere1");
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+               
+                anim.SetBool("Attacking", true);
+                //StartCoroutine(Example(anim));
+            }
+            else if (direction == 2 && enemy == true)
+            {
+                //Debug.Log("gothere2");
+                transform.rotation = Quaternion.Euler(0, 90, 0);
+                
+                anim.SetBool("Attacking", true);
+                //StartCoroutine(Example(anim));
+            }
+            else if (direction == 3 && enemy == true)
+            {
+                //Debug.Log("gothere3");
+
+                transform.rotation = Quaternion.Euler(0, 270, 0);
+                
+                
+                anim.SetBool("Attacking", true);
+                //StartCoroutine(Example(anim));
+            }
+
+            Debug.Log("NPC " + health);
+            //Debug.Log("Direction: " + direction);
+            //Debug.Log("Enemy: " + enemy);
+            
+            doneAttacking = true;
+
+            
+            enemy = false;
+            if (health <= 0)
+            {
+                TurnMan.RemoveUnit(this);
+                TurnMan.EndTurn();
+                //Destroy(this);
+            }
+            
+        }
+            
+    }
+
+    IEnumerator Example(Animator anim)
+    {
+        //print(Time.time);
+        
+        yield return new WaitForSecondsRealtime(1);
+        anim.SetBool("Attacking", false);
+        
+        
+        doneAttacking = true;
+        //doneAttacking = true;
+        //print(Time.time);
     }
 }
