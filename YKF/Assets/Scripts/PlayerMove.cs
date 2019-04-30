@@ -11,8 +11,8 @@ public class UnitMove : TacticsMove
     public Image healthBar;
     Tile hoveringTile;
 
-    public int maxHealth;
-    public int health;
+    public float maxHealth;
+    public float health;
     public GameObject unit;
     
     GameObject enemies;
@@ -61,15 +61,16 @@ public class UnitMove : TacticsMove
                 //anim.SetBool("Walking", false);
                 anim.SetBool("Attacking", false);
                 alreadyMoved = false;
+                
                 return;
             }
             if (!moving && doneAttacking && alreadyMoved == false)
             {
 
                 // FindNPCAttacker(health, anim);
-
+                
                 FindSelectableTiles();
-
+                
                 CheckMouse();
 
                 if (health <= 0)
@@ -86,10 +87,10 @@ public class UnitMove : TacticsMove
             else if (!moving && doneAttacking == false)
             {
                 anim.SetBool("Walking", false);
-                FindNPCToAttack(health, anim, transform);
+                FindNPCToAttack((int) health, anim, transform);
 
                 //TurnMan.EndTurn();
-
+                
                 if (health <= 0)
                 {
                    RemoveUnit();
@@ -99,7 +100,7 @@ public class UnitMove : TacticsMove
                     //TurnMan.EndTurn();
                     //    //Destroy(this);
                 }
-                
+
 
 
             }
@@ -109,7 +110,7 @@ public class UnitMove : TacticsMove
                 //FindNPCAttacker(health, anim);
                 anim.SetBool("Walking", true);
                 Move();
-
+                
                 if (health <= 0)
                 {
                     RemoveUnit();

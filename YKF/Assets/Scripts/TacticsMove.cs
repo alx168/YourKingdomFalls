@@ -13,6 +13,7 @@ public class TacticsMove : MonoBehaviour
     Tile currentTile;
     
 
+
     public bool moving = false;
     
     public int move = 5;
@@ -505,7 +506,7 @@ public class TacticsMove : MonoBehaviour
             GetCurrentTile();
             enemy = currentTile.CheckForNPCEnemies( jumpHeight, ref direction, position);
 
-
+            Debug.Log(enemy);
             if (direction == 0 && enemy == true)
             {
                 //Debug.Log("gothere0");

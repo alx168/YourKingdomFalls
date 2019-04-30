@@ -29,7 +29,10 @@ public class ChangeText : MonoBehaviour
         {
             mytext.text = "Player's Turn";
         }
-        TurnMan.EndTurn();
+        
+
+        
+            TurnMan.EndTurn();
 
     }
 }

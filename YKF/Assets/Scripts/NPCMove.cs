@@ -8,11 +8,11 @@ public class NPCMove : TacticsMove
     GameObject target;
     // Start is called before the first frame update
     public Animator anim;
-    public int health;
+    public float health;
     public Image healthBar;
 
     public GameObject unit;
-    public int maxHealth;
+    public float maxHealth;
     GameObject enemies;
     //GameObject.FindWithTag("Player");
     void changeHealth()
@@ -61,7 +61,7 @@ public class NPCMove : TacticsMove
             {
                 //FindUnitAttacker(health, anim);
 
-
+                
                 FindNearestTarget();
                 CalculatePath();
                 FindSelectableTiles();
@@ -72,13 +72,14 @@ public class NPCMove : TacticsMove
             else if (!moving && doneAttacking == false)
             {
                 anim.SetBool("Walking", false);
-                FindUnitToAttack(health, anim, transform);
+                FindUnitToAttack((int) health, anim, transform);
                 //if (health <= 0)
                 //{
-                   //TurnMan.RemoveUnit(this);
-                   //Destroy(unit);
-                    
+                //TurnMan.RemoveUnit(this);
+                //Destroy(unit);
+
                 //}
+                
                 TurnMan.EndTurn();
 
             }
@@ -87,6 +88,7 @@ public class NPCMove : TacticsMove
                 // todo move
                 //FindUnitAttacker(health, anim);
                 anim.SetBool("Walking", true);
+                
                 Move();
                 //FindUnitAttacker(health, anim);
             }

@@ -231,6 +231,7 @@ public class Tile : MonoBehaviour
         hasEnemy = CheckEnemyNPCTile(Vector3.right, jumpHeight, direction, position);
         if (hasEnemy == true)
         {
+            Debug.Log("right");
             direction = 2;
             return true;
         }
@@ -238,6 +239,7 @@ public class Tile : MonoBehaviour
         hasEnemy = CheckEnemyNPCTile(-Vector3.right, jumpHeight, direction, position);
         if (hasEnemy == true)
         {
+            
             direction = 3;
             return true;
         }
@@ -285,7 +287,7 @@ public class Tile : MonoBehaviour
                 }
                 else if (dirt == 2)
                 {
-                    if (Physics.Raycast(pos.position, Vector3.right, out hit, 1) && hit.transform.tag == "NPC")
+                    if (Physics.Raycast(pos.position, Vector3.right, out hit, 0.8f) && hit.transform.tag == "NPC")
                     {
                         hasEnemy = true;
                         NPCMove npc = hit.transform.gameObject.GetComponent<NPCMove>();
